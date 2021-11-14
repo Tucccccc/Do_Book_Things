@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Do Book Things</string>
+    <string name="new_user_sign_up">Bạn là người mới? <b>Đăng ký ngay nào</b></string>
+    <string name="book_category">Book Category</string>
+</resources>

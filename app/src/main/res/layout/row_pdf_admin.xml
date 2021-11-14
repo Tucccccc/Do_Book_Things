@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    app:contentPadding="5dp"
+    app:cardElevation="0dp"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="@color/white" >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/white" >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/pdfRel"
+                    android:layout_width="100dp"
+                    android:layout_height="130dp"
+                    android:background="@color/grayHint">
+
+                    <com.github.barteksc.pdfviewer.PDFView
+                        android:id="@+id/pdfView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+<!--                    </com.github.barteksc.pdfviewer.PDFView>-->
+
+                </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/btnMore"
+                android:layout_toEndOf="@+id/pdfRel"
+                android:maxLines="1"
+                android:text="Book Title" />
+
+            <TextView
+                android:id="@+id/txtDesPDF"
+                android:layout_width="match_parent"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTitle"
+                android:layout_toEndOf="@id/pdfRel"
+                android:layout_toStartOf="@+id/btnMore"
+                android:layout_marginTop="8dp"
+                android:text="Description"
+                android:maxLines="4"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtCategoryPDF"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:maxLines="1"
+                android:text="Category" />
+
+            <TextView
+                android:id="@+id/txtSizePDF"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@id/pdfRel"
+                android:maxLines="1"
+                android:text="Size" />
+
+            <TextView
+                android:id="@+id/txtDatePDF"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@id/txtCategoryPDF"
+                android:layout_toEndOf="@id/txtSizePDF"
+                android:maxLines="1"
+                android:text="Date"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:id="@+id/btnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:src="@drawable/ic_more" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

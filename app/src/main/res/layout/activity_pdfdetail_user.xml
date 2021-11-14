@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PDFDetailUser">
+
+    <ScrollView
+        android:id="@+id/scrollViewPDFDetailUser"
+        android:layout_width="match_parent"
+        android:layout_height="665dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/rltInLayout"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp" >
+
+                    <com.github.barteksc.pdfviewer.PDFView
+                        android:id="@+id/pdfViewUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtTitlePDFUser"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rltInLayout"
+                    android:text="Book's title" />
+
+                <TextView
+                    android:id="@+id/txtCatePDFUserLabel"
+                    style="@style/TextAppearance.MaterialComponents.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/rltInLayout"
+                    android:layout_below="@id/txtTitlePDFUser"
+                    android:maxLines="8"
+                    android:text="Category: "/>
+
+                <TextView
+                    android:id="@+id/txtCatePDFUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTitlePDFUser"
+                    android:layout_toEndOf="@+id/txtCatePDFUserLabel"
+                    android:text="N/A" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtDesPDFUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Description"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_button"
+        android:drawableBottom="@drawable/ic_baseline_menu_book_24"
+        android:text="Read"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
